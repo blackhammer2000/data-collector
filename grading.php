@@ -30,20 +30,15 @@ if(isset($_POST["submit"])){
             default:
                 return "Invalid Score entered.";
          }
-    
     }
     
 
-    $processedScore = processGrade($rawGrade);
-   
+    $gradePool = (object) [
+        above80 =>"You scored an 'A'.",
 
-    // $possibleGrades = {
-    //     1:"A",
-    //     2:"B",
-    //     3:"C",
-    //     4:"D",
-    //     5:"E",
-    // }
+    ];
+
+    $processedScore = processGrade($rawGrade);
     
     switch($processedScore){
         case "above80":
