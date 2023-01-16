@@ -8,15 +8,15 @@
   </head>
   <body>
     <form action="" method="POST">
-      <input type="number" name="num1">
-      <input type="number" name="num2">
+      <input type="number" name="grade">
+      <!-- <input type="number" name="num2"> -->
 
-      <button type="submit" name="submit">Add Numbers</button>    
+      <button type="submit" name="submit">grade</button>    
     </form>  
   </body>
 </html>
 
 <?php
- require("add.php")
+ require("grading.php")
 
     ?>
