@@ -8,7 +8,7 @@ if(isset($_POST["submit"])){
     $above60 = $grade >= 60 && $grade < 80;
     $above50 = $grade >= 50 && $grade < 60;
     $above40 = $grade >= 40 && $grade < 50;
-    $below40 = $grade >= 0 && $grade < 40;
+    $below40 = $grade > 0 && $grade < 40;
     
     switch($above80 ||  $above60 ||$above50||$above40||$below40){
         case $above80:
