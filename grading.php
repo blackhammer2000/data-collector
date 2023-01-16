@@ -14,27 +14,21 @@ if(isset($_POST["submit"])){
         switch($above80 ||  $above60 ||$above50||$above40||$below40){
             case $above80:
                 return "above80";
-                break;
     
             case $above60:
-                echo "above60.";
-                break;
-    
+                return "above60.";
+                
             case $above50:
-                echo "above50";
-                break;
+                return "above50";
     
             case $above40:
-                echo "above40";
-                break;
+                return "above40";
     
             case $below40:
-                echo "below40";
-                break;
+                return "below40";
     
             default:
-                echo "Invalid Score entered.";
-                break;
+                return "Invalid Score entered.";
          }
     
     }
