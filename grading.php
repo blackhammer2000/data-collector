@@ -33,6 +33,8 @@ if(isset($_POST["submit"])){
     
     }
     
+
+    $processedScore = processGrade($rawGrade);
    
 
     // $possibleGrades = {
@@ -43,29 +45,29 @@ if(isset($_POST["submit"])){
     //     5:"E",
     // }
     
-    switch($above80 ||  $above60 ||$above50||$above40||$below40){
-        case $above80:
+    switch($processedScore){
+        case "above80":
             echo "You scored an 'A'.";
             break;
 
-        case $above60:
+        case "above60":
             echo "You scored an 'B'.";
             break;
 
-        case $above50:
+        case "above50":
             echo "You scored an 'C'.";
             break;
 
-        case $above40:
+        case "above40":
             echo "You scored an 'D'.";
             break;
 
-        case $below40:
+        case "below40":
             echo "You scored an 'E'.";
             break;
 
         default:
-            echo "Invalid Score entered.";
+            echo $processedScore;
             break;
      }
 ?>
