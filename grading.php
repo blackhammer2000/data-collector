@@ -35,30 +35,33 @@ if(isset($_POST["submit"])){
 
     $gradePool = (object) [
         above80 =>"You scored an 'A'.",
-
+        above60 =>"You scored an 'B'.",
+        above50 =>"You scored an 'C'.",
+        above40 =>"You scored an 'D'.",
+        below40 =>"You scored an 'E'.",
     ];
 
     $processedScore = processGrade($rawGrade);
     
     switch($processedScore){
         case "above80":
-            echo "You scored an 'A'.";
+            echo $gradePool->$processedScore;
             break;
 
         case "above60":
-            echo "You scored an 'B'.";
+            echo $gradePool->$processedScore;
             break;
 
         case "above50":
-            echo "You scored an 'C'.";
+            echo $gradePool->$processedScore;
             break;
 
         case "above40":
-            echo "You scored an 'D'.";
+            echo $gradePool->$processedScore;
             break;
 
         case "below40":
-            echo "You scored an 'E'.";
+            echo $gradePool->$processedScore;
             break;
 
         default:
