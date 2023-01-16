@@ -13,23 +13,23 @@ if(isset($_POST["submit"])){
 
         switch($above80 ||  $above60 ||$above50||$above40||$below40){
             case $above80:
-                echo "You scored an 'A'.";
+                return "above80";
                 break;
     
             case $above60:
-                echo "You scored an 'B'.";
+                echo "above60.";
                 break;
     
             case $above50:
-                echo "You scored an 'C'.";
+                echo "above50";
                 break;
     
             case $above40:
-                echo "You scored an 'D'.";
+                echo "above40";
                 break;
     
             case $below40:
-                echo "You scored an 'E'.";
+                echo "below40";
                 break;
     
             default:
