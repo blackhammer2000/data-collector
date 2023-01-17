@@ -22,14 +22,18 @@
     </nav>
     </header>
 
-    <section class="container section hero-section border mt-5 d-flex justify-content-center align-tems-center text-center">
-      <div class="hero container border d-flex justify-content-center align-tems-center flex-column">
+    <section class="container section hero-section border mt-5 d-flex flex-column justify-content-start align-items-between text-center">
+      <div class="hero container border d-flex justify-content-center align-items-center flex-column">
         <div class="hero-header container border w-100">
           <h2><span class="text-danger">DATA</span> COLLECTOR.</h2>
         </div>
         <div class="hero-description">
           <h4>Fast and precise data at your disposal.</h4>
         </div>
+      </div>
+
+      <div class="container hero-quote">
+        <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, dolore! Voluptatum, provident dolores. Obcaecati eum nostrum excepturi enim aliquam voluptate quaerat odio eveniet numquam delectus vitae beatae consequuntur dolore cum dolores atque neque, debitis sed ad recusandae earum repellat! Maiores fugit aliquid est? Eius dolorum dolores quos molestiae illum aspernatur sed architecto mollitia obcaecati expedita, explicabo repellendus, consequuntur commodi pariatur.</h6>
       </div>
       
     </section>
