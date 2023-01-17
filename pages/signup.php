@@ -30,5 +30,5 @@
 </html>
 
 <?php
-
+require("./php/signup.php")
 ?>
