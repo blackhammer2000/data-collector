@@ -64,29 +64,6 @@
         <li class="ml-4"><a href="">API</a></li>
       </ul>
     </footer>
-
-    
-    <fieldset class="container  bg-danger">
-      <legend  class="text-center bg-danger w-50"><span class="text-white">DATA</span> COLLECTOR <sup>&reg;</sup></legend>
-    <form action="" method="POST" class="form container">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Firstname" />
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Lastname" />
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Email" />
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Course" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-success container" type="submit">SIGN UP</button>
-      </div>
-    </form>
-    </fieldset>
-
   </body>
 </html>
 
