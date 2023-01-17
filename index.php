@@ -53,9 +53,9 @@
       <ul
         class="border-right px-5 row justify-content-around w-auto h-100 align-items-center list-unstyled"
       >
-        <li><a href="">PRIVACY POLICY</a></li>
+        <li class="mr-4"><a href="">PRIVACY POLICY</a></li>
         <li><a href="">TERMS OF SERVICE</a></li>
-        <li><a href="">API</a></li>
+        <li class="ml-4"><a href="">API</a></li>
       </ul>
     </footer>
 
