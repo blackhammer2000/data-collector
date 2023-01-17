@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./css/index.css">
   </head>
   <body>
-    <header class="header container d-flex border justify-content-between mt-4">
+    <header class="header container border-bottom d-flex justify-content-between mt-4">
       <div class="heading w-50 text-left align-items-center">
         <h1>DATA COLLECTOR</h1>
       </div>
@@ -22,9 +22,9 @@
     </nav>
     </header>
 
-    <section class="container section hero-section border mt-5 d-flex flex-column justify-content-between align-items-between text-center">
-      <div class="hero container border d-flex justify-content-center align-items-center flex-column">
-        <div class="hero-header container border w-100">
+    <section class="border-bottom  pb-3 container section hero-section mt-5 d-flex flex-column justify-content-between align-items-between text-center">
+      <div class="hero container  d-flex justify-content-center align-items-center flex-column">
+        <div class="hero-header container  w-100">
           <h2><span class="text-danger">DATA</span> COLLECTOR.</h2>
         </div>
         <div class="hero-description mt-4">
@@ -46,12 +46,12 @@
       class="w-100 mt-5 row justify-content-around align-items-center h-auto"
     >
       <div
-        class="border-left px-5 payments font-italic font-weight-light w-auto h-100"
+        class=" border-left px-5 payments font-italic font-weight-light w-auto h-100"
       >
         <h6><span>2023</span> DATA-COLLECTOR&reg;</h6>
       </div>
       <ul
-        class="border-right px-5 row justify-content-around w-auto h-100 align-items-center list-unstyled"
+        class=" border-right px-5 row justify-content-around w-auto h-100 align-items-center list-unstyled"
       >
         <li class="mr-4"><a href="">PRIVACY POLICY</a></li>
         <li><a href="">TERMS OF SERVICE</a></li>
