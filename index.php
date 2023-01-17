@@ -15,9 +15,9 @@
       </div>
     <nav class="nav d-flex justify-content-end align-items-center">
       <ul class="d-flex container-fluid list-unstyled font-weight-bold">
-        <li class="mr-4"><a href="./signup.php">SIGNUP</a></li>
-        <li><a href="./login.php">LOGIN</a></li>
-        <li class="ml-4"><a href="./users.php">USERS</a></li>
+        <li class="mr-4"><a href=".pages/signup.php">SIGNUP</a></li>
+        <li><a href=".pages/login.php">LOGIN</a></li>
+        <li class="ml-4"><a href=".pages/users.php">USERS</a></li>
       </ul>
     </nav>
     </header>
