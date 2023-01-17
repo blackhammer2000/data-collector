@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>DATA COLLECTOR</title>
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
   </head>
   <body>
-    <header class="container d-flex border justify-content-between h-25 mt-4">
+    <header class="header container d-flex border justify-content-between mt-4">
       <div class="heading w-50 text-left align-items-center">
         <h1>DATA COLLECTOR</h1>
       </div>
@@ -21,7 +21,7 @@
     </nav>
     </header>
 
-    <section class="container section hero-section h-75 border mt-5 d-flex justify-content-center align-tems-center text-center">
+    <section class="container section hero-section border mt-5 d-flex justify-content-center align-tems-center text-center">
       <div class="hero container">
         <div class="hero-header container border ">
           <h2><span class="text-danger">DATA</span> COLLECTOR.</h2>
@@ -32,6 +32,24 @@
       </div>
       
     </section>
+
+    <footer
+      class="w-100 mt-5 row justify-content-around align-items-center h-auto"
+    >
+      <div
+        class="border-left px-5 payments font-italic font-weight-light w-auto h-100"
+      >
+        <h6><span>2023</span> DATA-COLLECTOR&reg;</h6>
+      </div>
+      <ul
+        class="border-right px-5 row justify-content-around w-auto h-100 align-items-center list-unstyled"
+      >
+        <li><a href="">PRIVACY POLICY</a></li>
+        <li><a href="">TERMS OF SERVICE</a></li>
+        <li><a href="">API</a></li>
+      </ul>
+    </footer>
+
    
     <!-- <form action="" method="POST">
       <input type="number" name="grade">
