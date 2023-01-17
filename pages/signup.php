@@ -25,7 +25,7 @@
 
     <section class="border-bottom  pb-3 container section hero-section mt-5 d-flex flex-column justify-content-between align-items-between text-center">
     <fieldset class="container border-top">
-      <legend  class="text-center bg-danger w-50 border-top border-left border-right mb-4"><span class="text-white">DATA</span> COLLECTOR <sup>&reg;</sup></legend>
+      <legend  class="text-center bg-danger w-50 mb-4"><span class="text-white">DATA</span> COLLECTOR <sup>&reg;</sup></legend>
     <form action="" method="POST" class="form container ">
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Firstname" />
