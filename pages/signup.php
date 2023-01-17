@@ -10,9 +10,9 @@
     <link rel="stylesheet" type="text/css" href="../css/universal.css" />
   </head>
   <body>
-    <fieldset class="container border">
-      <legend  class="text-center bg-danger"><span class="text-white-50">DATA</span> COLLECTOR</legend>
-    <form action="" method="POST" class="form container border bg-danger">
+    <fieldset class="container  bg-danger">
+      <legend  class="text-center bg-danger w-50"><span class="text-white">DATA</span> COLLECTOR <sup>&reg;</sup></legend>
+    <form action="" method="POST" class="form container">
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Firstname" />
       </div>
@@ -24,6 +24,9 @@
       </div>
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Course" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-outline-success" type="submit">SIGN UP</button>
       </div>
     </form>
     </fieldset>
