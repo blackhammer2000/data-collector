@@ -34,11 +34,11 @@ if(isset($_POST["submit"])){
     
 
     $gradePool = (object) [
-        $scoredAbove80 =>"You scored an 'A'.",
-        $scoredAbove60 =>"You scored an 'B'.",
-        $scoredAbove50 =>"You scored an 'C'.",
-        $scoredAbove40 =>"You scored an 'D'.",
-        $scoredBelow40 =>"You scored an 'E'.",
+        $above80 =>"You scored an 'A'.",
+        $above60 =>"You scored an 'B'.",
+        $above50 =>"You scored an 'C'.",
+        $above40 =>"You scored an 'D'.",
+        $below40 =>"You scored an 'E'.",
     ];
 
     $processedScore = processGrade($rawGrade);
