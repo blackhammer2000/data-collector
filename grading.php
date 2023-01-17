@@ -67,5 +67,9 @@ if(isset($_POST["submit"])){
         default:
             echo $processedScore;
             break;
-     }
+    
+    }
+}
+
+    
 ?>
