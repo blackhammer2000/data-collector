@@ -1,0 +1,15 @@
+body {
+  min-height: 100vh;
+}
+
+.header {
+  min-height: 10vh;
+}
+
+.section {
+  min-height: 60vh;
+}
+
+footer {
+  min-height: 10vh;
+}

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DATA COLLECTOR</title>
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
   </head>
   <body>
     <header class="header container d-flex border justify-content-between mt-4">
@@ -14,16 +15,16 @@
       </div>
     <nav class="nav d-flex justify-content-end align-items-center">
       <ul class="d-flex container-fluid list-unstyled font-weight-bold">
-        <li class="mr-4"><a href="./signup.php">signup</a></li>
-        <li><a href="./login.php">login</a></li>
-        <li class="ml-4"><a href="./users.php">users</a></li>
+        <li class="mr-4"><a href="./signup.php">SIGNUP</a></li>
+        <li><a href="./login.php">LOGIN</a></li>
+        <li class="ml-4"><a href="./users.php">USERS</a></li>
       </ul>
     </nav>
     </header>
 
     <section class="container section hero-section border mt-5 d-flex justify-content-center align-tems-center text-center">
-      <div class="hero container">
-        <div class="hero-header container border ">
+      <div class="hero container border d-flex justify-content-center align-tems-center flex-column">
+        <div class="hero-header container border w-100">
           <h2><span class="text-danger">DATA</span> COLLECTOR.</h2>
         </div>
         <div class="hero-description">
