@@ -13,3 +13,8 @@ body {
 footer {
   min-height: 10vh;
 }
+
+header a,
+footer a {
+  color: crimson;
+}
