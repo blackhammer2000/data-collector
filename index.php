@@ -7,6 +7,7 @@
     <title>DATA COLLECTOR</title>
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/universal.css">
   </head>
   <body>
     <header class="header container border-bottom d-flex justify-content-between mt-4">
