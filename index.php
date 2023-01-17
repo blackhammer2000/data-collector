@@ -7,16 +7,20 @@
     <title>Document</title>
   </head>
   <body>
-    <form action="" method="POST">
+    <header>
+
+    </header>
+   
+    <!-- <form action="" method="POST">
       <input type="number" name="grade">
-      <!-- <input type="number" name="num2"> -->
+      <input type="number" name="num2">
 
       <button type="submit" name="submit">grade</button>    
-    </form>  
+    </form>   -->
   </body>
 </html>
 
-<?php
- require("grading.php")
+<!-- <?php
+//  require("grading.php")
 
-    ?>
+    ?> -->
