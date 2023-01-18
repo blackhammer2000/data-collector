@@ -35,27 +35,27 @@
         <div class="text-danger text-left"><?php echo $errors["firstname"];?></div>
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Lastname"  name="lastname" value="<?php echo $lastName;?>"/>
+        <input type="text" class="form-control" placeholder="Lastname"  name="lastname" value="<?php echo htmlspecialchars($lastName);?>"/>
         <div class="text-danger text-left"><?php echo $errors["lastname"];?></div>
 
       </div>
       <div class="form-group">
-        <input type="email" class="form-control" placeholder="Email"  name="email" value="<?php echo $email;?>"/>
+        <input type="email" class="form-control" placeholder="Email"  name="email" value="<?php  echo htmlspecialchars($email);?>"/>
         <div class="text-danger text-left"><?php echo $errors["email"];?></div>
 
       </div>
       <div class="form-group">
-        <input type="password" class="form-control" placeholder="Password"  name="password" value="<?php echo $password;?>"/>
+        <input type="password" class="form-control" placeholder="Password"  name="password" value="<?php  echo htmlspecialchars($password);?>"/>
         <div class="text-danger text-left"><?php echo $errors["password"];?></div>
 
       </div>
       <div class="form-group">
-        <input type="password" class="form-control" placeholder="Confirm password"  name="confirmPassword" value="<?php echo $confirmPassword;?>"/>
+        <input type="password" class="form-control" placeholder="Confirm password"  name="confirmPassword" value="<?php  echo htmlspecialchars($confirmPassword);?>"/>
         <div class="text-danger text-left"><?php echo $errors["confirmPassword"];?></div>
 
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Course"  name="course" value="<?php echo $course;?>"/>
+        <input type="text" class="form-control" placeholder="Course"  name="course" value="<?php  echo htmlspecialchars($course);?>"/>
         <div class="text-danger text-left"><?php echo $errors["course"];?></div>
 
       </div>
