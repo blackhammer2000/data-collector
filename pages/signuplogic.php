@@ -17,7 +17,7 @@ if(isset($_POST["submit"])){
         $errors["lastname"] =  "Lastname cannot be empty <br/>"
     }
 
-    if(!preg_match(/^[a-zA-Z\s]+$/, $firstName)){
+    if(!preg_match(/^[a-zA-Z\s]+$/, $lastName)){
         // $errors["firstname"] = "Invalid Lastname name"
         echo "Lastname is invalid."
     }
