@@ -26,7 +26,7 @@
     </nav>
     </header>
 
-    <section class="border-bottom  pb-3 container section hero-section mt-1 d-flex flex-column justify-content-between align-items-between text-center">
+    <section class="border-bottom  pb-3 container section hero-section mt-4 d-flex flex-column justify-content-between align-items-between text-center">
     <fieldset class="container border-top">
       <legend  class="text-center bg-danger w-50"><span class="text-white">DATA</span> COLLECTOR <sup>&reg;</sup></legend>
     <form action="" method="POST" class="form container mt-2">

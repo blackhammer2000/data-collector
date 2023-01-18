@@ -57,9 +57,8 @@ if(isset($_POST["submit"])){
         $errors["course"] =  "Course cannot be empty <br/>";
     
     if(!preg_match($textRegex, $course))
-        $errors["course"] = "Invalid Email";
-        
-}
+        $errors["course"] = "Invalid Course Name";
 
+}
 
 ?>

@@ -31,7 +31,7 @@
       <legend  class="text-center bg-danger w-50 mb-5"><span class="text-white">DATA</span> COLLECTOR <sup>&reg;</sup></legend>
     <form action="" method="POST" class="form container" name="submit">
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="*Email"  name="firstname" value="<?php echo htmlspecialchars($email);?>"/>
+        <input type="email" class="form-control" placeholder="*Email"  name="firstname" value="<?php echo htmlspecialchars($email);?>"/>
         <div class="text-danger"><?php echo $errors["email"];?></div>
       </div>
       <div class="form-group">
