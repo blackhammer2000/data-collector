@@ -1,10 +1,14 @@
 <!DOCTYPE html>
+
+<?php
+include("signuplogic.php")?>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FORM VALIDATOR</title>
+    <title class="text-danger">DATA COLLECTOR</title>
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/signup.css" />
     <link rel="stylesheet" type="text/css" href="../css/universal.css" />
@@ -47,7 +51,7 @@
 
       </div>
       <div class="form-group">
-        <button class="btn btn-success container" type="submit">SIGN UP</button>
+        <button class="btn btn-success container" type="submit" name="submit">SIGN UP</button>
       </div>
     </form>
     </fieldset>
@@ -74,5 +78,4 @@
   </body>
 </html>
 
-<?php
-include("signuplogic.php")?>
+
