@@ -29,7 +29,7 @@
     <section class="border-bottom  pb-3 container section hero-section mt-5 d-flex flex-column justify-content-between align-items-between text-center">
     <fieldset class="container border-top">
       <legend  class="text-center bg-danger w-50"><span class="text-white">DATA</span> COLLECTOR <sup>&reg;</sup></legend>
-    <form action="" method="POST" class="form container" name="submit">
+    <form action="" method="POST" class="form container mt-2" name="submit">
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Firstname"  name="firstname" value="<?php echo htmlspecialchars($firstName);?>"/>
         <div class="text-danger"><?php echo $errors["firstname"];?></div>
@@ -69,7 +69,7 @@
     </section>
 
     <footer
-      class="w-100 mt-5 row justify-content-around align-items-center h-auto"
+      class="w-100 mt-3 row justify-content-around align-items-center h-auto"
     >
       <div
         class=" border-left px-5 payments font-italic font-weight-light w-auto h-100"

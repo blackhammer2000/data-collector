@@ -7,7 +7,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DATA COLLECTOR</title>
+    <title>DATA COLLECTOR LOGIN</title>
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/signup.css" />
     <link rel="stylesheet" type="text/css" href="../css/universal.css" />
@@ -31,11 +31,11 @@
       <legend  class="text-center bg-danger w-50 mb-5"><span class="text-white">DATA</span> COLLECTOR <sup>&reg;</sup></legend>
     <form action="" method="POST" class="form container" name="submit">
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Firstname"  name="firstname" value="<?php echo htmlspecialchars($email);?>"/>
+        <input type="text" class="form-control" placeholder="*Email"  name="firstname" value="<?php echo htmlspecialchars($email);?>"/>
         <div class="text-danger"><?php echo $errors["email"];?></div>
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Lastname"  name="lastname" value="<?php echo $password;?>"/>
+        <input type="password" class="form-control" placeholder="*Password"  name="lastname" value="<?php echo htmlspecialchars($password);?>"/>
         <div class="text-danger"><?php echo $errors["password"];?></div>
 
       </div>
