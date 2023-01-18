@@ -5,13 +5,18 @@ if(isset($_POST["submit"])){
     $email = $_POST["email"];
     $course = $_POST["course"];
 
+    $textRegex = /^[a-zA-Z\s]+$/;
+    $emailRegex = /^[a-zA-Z0-9]+$/
+
     if(empty($_POST["firstname"])){
         // $errors["firstname"] =  "Firstname cannot be empty <br/>";
-        echo "Firstname cannot be empty."
+        echo "Firstname cannot be empty.";
+
+    }else{
 
     }
 
-    if(!preg_match(/^[a-zA-Z\s]+$/, $firstName)){
+    if(!preg_match($textRegex, $firstName)){
         // $errors["firstname"] = "Invalid First name";
         echo "Firstname is invalid."
     }
@@ -23,7 +28,7 @@ if(isset($_POST["submit"])){
 
     }
 
-    if(!preg_match(/^[a-zA-Z\s]+$/, $lastName)){
+    if(!preg_match($textRegex, $lastName)){
         // $errors["lastname"] = "Invalid Lastname name"
         echo "Lastname is invalid."
     }
@@ -35,7 +40,7 @@ if(isset($_POST["submit"])){
 
     }
 
-    if(!preg_match(/^[a-zA-Z0-9]+$/, $email)){
+    if(!preg_match($emailRegex, $email)){
         // $errors["email"] = "Invalid Email"
         echo "Email is invalid."
     }
@@ -48,7 +53,7 @@ if(isset($_POST["submit"])){
 
     }
 
-    if(!preg_match(/^[a-zA-Z\s]+$/, $course)){
+    if(!preg_match($textRegex, $course)){
         // $errors["course"] = "Invalid Email"
         echo "Course is invalid."
     }
