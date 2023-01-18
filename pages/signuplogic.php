@@ -48,7 +48,7 @@ if(isset($_POST["submit"])){
 
     }
 
-    if(!preg_match(/^[a-zA-Z0-9]+$/, $course)){
+    if(!preg_match(/^[a-zA-Z\s]+$/, $course)){
         // $errors["course"] = "Invalid Email"
         echo "Course is invalid."
     }
