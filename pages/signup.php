@@ -28,21 +28,21 @@
       <legend  class="text-center bg-danger w-50 mb-5"><span class="text-white">DATA</span> COLLECTOR <sup>&reg;</sup></legend>
     <form action="" method="POST" class="form container ">
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Firstname"  name="firstname" value="<?php echo htmlspecialchars($firstname);?>"/>
+        <input type="text" class="form-control" placeholder="Firstname"  name="firstname" value="<?php echo htmlspecialchars($firstName);?>"/>
         <div class="text-danger"><?php echo $errors["firstname"];?></div>
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Lastname"  name="lastname"/>
+        <input type="text" class="form-control" placeholder="Lastname"  name="lastname" value="<?php echo htmlspecialchars($lastName);?>"/>
         <div class="text-danger"><?php echo $errors["lastname"];?></div>
 
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Email"  name="email"/>
+        <input type="text" class="form-control" placeholder="Email"  name="email" value="<?php echo htmlspecialchars($email);?>"/>
         <div class="text-danger"><?php echo $errors["email"];?></div>
 
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Course"  name="course"/>
+        <input type="text" class="form-control" placeholder="Course"  name="course" value="<?php echo htmlspecialchars($course);?>"/>
         <div class="text-danger"><?php echo $errors["course"];?></div>
 
       </div>
