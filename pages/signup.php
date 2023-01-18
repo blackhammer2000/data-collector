@@ -28,16 +28,16 @@
       <legend  class="text-center bg-danger w-50 mb-5"><span class="text-white">DATA</span> COLLECTOR <sup>&reg;</sup></legend>
     <form action="" method="POST" class="form container ">
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Firstname" />
+        <input type="text" class="form-control" placeholder="Firstname"  name="firstname"/>
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Lastname" />
+        <input type="text" class="form-control" placeholder="Lastname"  name="lastname"/>
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Email" />
+        <input type="text" class="form-control" placeholder="Email"  name="email"/>
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Course" />
+        <input type="text" class="form-control" placeholder="Course"  name="course"/>
       </div>
       <div class="form-group">
         <button class="btn btn-success container" type="submit">SIGN UP</button>
