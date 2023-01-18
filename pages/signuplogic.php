@@ -11,7 +11,7 @@ if(isset($_POST["submit"])){
     $course = $_POST["course"];
 
     $textRegex = '/^[a-zA-Z\s]+$/';
-    $emailRegex = '/^[a-zA-Z0-9]+$/';
+    $emailRegex = '/^[a-zA-Z0-9@.]+$/';
 
     if(empty($_POST["firstname"])){
         $errors["firstname"] =  "Firstname cannot be empty <br/>";
