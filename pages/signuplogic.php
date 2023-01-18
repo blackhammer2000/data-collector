@@ -68,6 +68,11 @@ if(isset($_POST["submit"])){
         // echo "Email is invalid.";
     }
 
+    if($password !== $confirmPassword){
+        $errors["confirmPassword"] = "Passwords do not match";
+        // echo "Email is invalid.";
+    }
+
     if(empty($_POST["course"])){
         $errors["course"] =  "Course cannot be empty <br/>";
         // echo "Course cannot be empty.";
