@@ -1,7 +1,7 @@
 <?php
 
 $firstName = $lastName = $email =$course = $password = $confirmPassword = "";
-$errors = array("firstname" => "","lastname" => "","email" => "","password" => "","course" => "");
+$errors = array("firstname" => "", "lastname" => "", "email" => "", "password" => "", "confirmPassword" => "", "course" => "");
 
 if(isset($_POST["submit"])){
 
@@ -55,6 +55,16 @@ if(isset($_POST["submit"])){
 
     if(!preg_match($passwordRegex, $password)){
         $errors["password"] = "Password must be letters and numbers only";
+        // echo "Email is invalid.";
+    }
+
+    if(empty($_POST["confirmPassword"])){
+        $errors["confirmPassword"] =  "Password cannot be empty <br/>";
+        // echo "Email cannot be empty.";
+    }
+
+    if(!preg_match($passwordRegex, $password)){
+        $errors["confirmPassword"] = "Password must be letters and numbers only";
         // echo "Email is invalid.";
     }
 
