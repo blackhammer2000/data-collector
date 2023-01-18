@@ -18,58 +18,58 @@ if(isset($_POST["submit"])){
 
     
 
-    if(empty($_POST["firstname"])){
+    if(empty($_POST["firstname"]))
         $errors["firstname"] =  "Firstname cannot be empty <br/>";
-    }
+    
 
-    if(!preg_match($textRegex, $firstName)){
+    if(!preg_match($textRegex, $firstName))
         $errors["firstname"] = "Invalid First name";
-    }
+    
 
-    if(empty($_POST["lastname"])){
+    if(empty($_POST["lastname"]))
         $errors["lastname"] =  "Lastname cannot be empty <br/>";
-    }
+    
 
-    if(!preg_match($textRegex, $lastName)){
+    if(!preg_match($textRegex, $lastName))
         $errors["lastname"] = "Invalid Lastname name";
-    }
+    
 
-    if(empty($_POST["email"])){
+    if(empty($_POST["email"]))
         $errors["email"] =  "Email cannot be empty <br/>";
-    }
+    
 
-    if(!preg_match($emailRegex, $email)){
+    if(!preg_match($emailRegex, $email))
         $errors["email"] = "Invalid Email";
-    }
+    
 
-    if(empty($_POST["password"])){
+    if(empty($_POST["password"]))
         $errors["password"] =  "Password cannot be empty <br/>";
-    }
+    
 
-    if(!preg_match($passwordRegex, $password)){
+    if(!preg_match($passwordRegex, $password))
         $errors["password"] = "Password must be letters and numbers only";
-    }
+    
 
-    if(empty($_POST["confirmPassword"])){
+    if(empty($_POST["confirmPassword"]))
         $errors["confirmPassword"] =  "Password cannot be empty <br/>";
-    }
+    
 
-    if(!preg_match($passwordRegex, $password)){
+    if(!preg_match($passwordRegex, $password))
         $errors["confirmPassword"] = "Password must be letters and numbers only";
-    }
+    
 
     if($password !== $confirmPassword){
         $errors["password"] = "Passwords do not match";
         $errors["confirmPassword"] = "Passwords do not match";
     }
 
-    if(empty($_POST["course"])){
+    if(empty($_POST["course"]))
         $errors["course"] =  "Course cannot be empty <br/>";
-    }
+    
 
-    if(!preg_match($textRegex, $course)){
+    if(!preg_match($textRegex, $course))
         $errors["course"] = "Invalid Email";
-    }
+    
 
 }
 
