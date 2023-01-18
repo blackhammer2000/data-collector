@@ -40,7 +40,7 @@
 
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Email"  name="email" value="<?php echo $email;?>"/>
+        <input type="email" class="form-control" placeholder="Email"  name="email" value="<?php echo $email;?>"/>
         <div class="text-danger"><?php echo $errors["email"];?></div>
 
       </div>

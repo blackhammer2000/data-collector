@@ -1,4 +1,8 @@
 <?php
+
+$firstName = $lastName = $email =$course = "";
+$errors = array("firstname" => "","lastname" => "","email" => "","course" => "");
+
 if(isset($_POST["submit"])){
 
     $firstName = $_POST["firstname"];
