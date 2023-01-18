@@ -16,7 +16,7 @@
       </div>
     <nav class="nav d-flex justify-content-end align-items-center">
       <ul class="d-flex container-fluid list-unstyled font-weight-bold text-dark">
-        <li class="mr-4"><a href="./index.php">HOME</a></li>
+        <li class="mr-4"><a href="../index.php">HOME</a></li>
         <li><a href="./login.php">LOGIN</a></li>
         <li class="ml-4"><a href="./contact.php">CONTACT</a></li>
       </ul>
