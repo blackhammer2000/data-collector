@@ -1,5 +1,6 @@
 <?php
 if(isset($_POST["submit"])){
+    
     $firstName = $_POST["firstname"];
     $lastName = $_POST["lastname"];
     $email = $_POST["email"];
@@ -9,12 +10,12 @@ if(isset($_POST["submit"])){
     // $emailRegex = /^[a-zA-Z0-9]+$/;
 
     if(empty($_POST["firstname"])){
-        // $errors["firstname"] =  "Firstname cannot be empty <br/>";
-        echo "Firstname cannot be empty.";
+        $errors["firstname"] =  "Firstname cannot be empty <br/>";
+        // echo "Firstname cannot be empty.";
 
     }
 
-    if(!preg_match(/^[a-zA-Z\s]+$/, $firstName)){
+    if(!preg_match(/[a-zA-Z\s]+$/, $firstName)){
         $errors["firstname"] = "Invalid First name";
         // echo "Firstname is invalid.";
     }
