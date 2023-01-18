@@ -14,6 +14,9 @@ if(isset($_POST["submit"])){
 
     $textRegex = '/^[a-zA-Z\s]+$/';
     $emailRegex = '/^[a-zA-Z0-9@.]+$/';
+    $passwordRegex = '/^[\W]/';
+
+    
 
     if(empty($_POST["firstname"])){
         $errors["firstname"] =  "Firstname cannot be empty <br/>";
@@ -42,6 +45,16 @@ if(isset($_POST["submit"])){
 
     if(!preg_match($emailRegex, $email)){
         $errors["email"] = "Invalid Email";
+        // echo "Email is invalid.";
+    }
+
+    if(empty($_POST["password"])){
+        $errors["password"] =  "Password cannot be empty <br/>";
+        // echo "Email cannot be empty.";
+    }
+
+    if(!preg_match($passwordRegex, $password)){
+        $errors["password"] = "Password must be letters and numbers only";
         // echo "Email is invalid.";
     }
 
