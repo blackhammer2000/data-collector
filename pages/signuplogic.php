@@ -19,7 +19,7 @@ if(isset($_POST["submit"])){
     }
 
     if(!preg_match(/^[a-zA-Z\s]+$/, $lastName)){
-        // $errors["firstname"] = "Invalid Lastname name"
+        // $errors["lastname"] = "Invalid Lastname name"
         echo "Lastname is invalid."
     }
 
@@ -31,8 +31,20 @@ if(isset($_POST["submit"])){
     }
 
     if(!preg_match(/^[a-zA-Z0-9]+$/, $email)){
-        // $errors["firstname"] = "Invalid Email"
+        // $errors["email"] = "Invalid Email"
         echo "Email is invalid."
+    }
+
+
+    $course = $_POST["course"];
+
+    if(empty($_POST["course"])){
+        $errors["course"] =  "Course cannot be empty <br/>"
+    }
+
+    if(!preg_match(/^[a-zA-Z0-9]+$/, $course)){
+        // $errors["course"] = "Invalid Email"
+        echo "Course is invalid."
     }
 
 }
