@@ -45,6 +45,16 @@
 
       </div>
       <div class="form-group">
+        <input type="password" class="form-control" placeholder="Password"  name="password" value="<?php echo $password;?>"/>
+        <div class="text-danger"><?php echo $errors["password"];?></div>
+
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" placeholder="Confirm password"  name="confirmPassword" value="<?php echo $confirmPassword;?>"/>
+        <div class="text-danger"><?php echo $errors["password"];?></div>
+
+      </div>
+      <div class="form-group">
         <input type="text" class="form-control" placeholder="Course"  name="course" value="<?php echo $course;?>"/>
         <div class="text-danger"><?php echo $errors["course"];?></div>
 
