@@ -36,17 +36,17 @@ include("signuplogic.php")?>
         <div class="text-danger"><?php echo $errors["firstname"];?></div>
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Lastname"  name="lastname" value="<?php echo htmlspecialchars($lastName);?>"/>
+        <input type="text" class="form-control" placeholder="Lastname"  name="lastname" value="<?php echo $lastName;?>"/>
         <div class="text-danger"><?php echo $errors["lastname"];?></div>
 
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Email"  name="email" value="<?php echo htmlspecialchars($email);?>"/>
+        <input type="text" class="form-control" placeholder="Email"  name="email" value="<?php echo $email;?>"/>
         <div class="text-danger"><?php echo $errors["email"];?></div>
 
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Course"  name="course" value="<?php echo htmlspecialchars($course);?>"/>
+        <input type="text" class="form-control" placeholder="Course"  name="course" value="<?php echo $course;?>"/>
         <div class="text-danger"><?php echo $errors["course"];?></div>
 
       </div>
