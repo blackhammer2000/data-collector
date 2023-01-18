@@ -1,13 +1,15 @@
 <?php
 
-$firstName = $lastName = $email =$course = "";
-$errors = array("firstname" => "","lastname" => "","email" => "","course" => "");
+$firstName = $lastName = $email =$course = $password = $confirmPassword = "";
+$errors = array("firstname" => "","lastname" => "","email" => "","password" => "","course" => "");
 
 if(isset($_POST["submit"])){
 
     $firstName = $_POST["firstname"];
     $lastName = $_POST["lastname"];
     $email = $_POST["email"];
+    $password = $_POST["password"];
+    $confirmPassword = $_POST["confirmPassword"];
     $course = $_POST["course"];
 
     $textRegex = '/^[a-zA-Z\s]+$/';

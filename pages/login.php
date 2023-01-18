@@ -31,26 +31,17 @@
       <legend  class="text-center bg-danger w-50 mb-5"><span class="text-white">DATA</span> COLLECTOR <sup>&reg;</sup></legend>
     <form action="" method="POST" class="form container" name="submit">
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Firstname"  name="firstname" value="<?php echo htmlspecialchars($firstName);?>"/>
-        <div class="text-danger"><?php echo $errors["firstname"];?></div>
-      </div>
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Lastname"  name="lastname" value="<?php echo $lastName;?>"/>
-        <div class="text-danger"><?php echo $errors["lastname"];?></div>
-
-      </div>
-      <div class="form-group">
-        <input type="email" class="form-control" placeholder="Email"  name="email" value="<?php echo $email;?>"/>
+        <input type="text" class="form-control" placeholder="Firstname"  name="firstname" value="<?php echo htmlspecialchars($email);?>"/>
         <div class="text-danger"><?php echo $errors["email"];?></div>
-
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Course"  name="course" value="<?php echo $course;?>"/>
-        <div class="text-danger"><?php echo $errors["course"];?></div>
+        <input type="text" class="form-control" placeholder="Lastname"  name="lastname" value="<?php echo $password;?>"/>
+        <div class="text-danger"><?php echo $errors["password"];?></div>
 
       </div>
+    
       <div class="form-group">
-        <button class="btn btn-success container" type="submit">SIGN UP</button>
+        <button class="btn btn-success container" type="submit">LOGIN</button>
       </div>
     </form>
     </fieldset>
