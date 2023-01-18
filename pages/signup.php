@@ -51,7 +51,7 @@
       </div>
       <div class="form-group">
         <input type="password" class="form-control" placeholder="Confirm password"  name="confirmPassword" value="<?php echo $confirmPassword;?>"/>
-        <div class="text-danger"><?php echo $errors["password"];?></div>
+        <div class="text-danger"><?php echo $errors["confirmPassword"];?></div>
 
       </div>
       <div class="form-group">
