@@ -5,7 +5,7 @@ if(isset($_POST["submit"])){
     $email = $_POST["email"];
     $course = $_POST["course"];
 
-    // $textRegex = /^[a-zA-Z\s]+$/;
+    $textRegex = /^[a-zA-Z\s]+$/;
     // $emailRegex = /^[a-zA-Z0-9]+$/;
 
     if(empty($_POST["firstname"])){
