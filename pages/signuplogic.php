@@ -12,9 +12,9 @@ if(isset($_POST["submit"])){
     $confirmPassword = $_POST["confirmPassword"];
     $course = $_POST["course"];
 
-    $textRegex = '/^[a-zA-Z\s]+$/';
-    $emailRegex = '/^[a-zA-Z0-9@.]+$/';
-    $passwordRegex = '/^[\W]/';
+    $textRegex = '/^[\w\s]+$/';
+    $emailRegex = '/^[\w@.]+$/';
+    $passwordRegex = '/^[\w]/';
 
     
 
@@ -69,6 +69,7 @@ if(isset($_POST["submit"])){
     }
 
     if($password !== $confirmPassword){
+        $errors["password"] = "Passwords do not match";
         $errors["confirmPassword"] = "Passwords do not match";
         // echo "Email is invalid.";
     }

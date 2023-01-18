@@ -26,41 +26,41 @@
     </nav>
     </header>
 
-    <section class="border-bottom  pb-3 container section hero-section mt-5 d-flex flex-column justify-content-between align-items-between text-center">
+    <section class="border-bottom  pb-3 container section hero-section mt-1 d-flex flex-column justify-content-between align-items-between text-center">
     <fieldset class="container border-top">
       <legend  class="text-center bg-danger w-50"><span class="text-white">DATA</span> COLLECTOR <sup>&reg;</sup></legend>
-    <form action="" method="POST" class="form container mt-2" name="submit">
+    <form action="" method="POST" class="form container mt-2">
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Firstname"  name="firstname" value="<?php echo htmlspecialchars($firstName);?>"/>
-        <div class="text-danger"><?php echo $errors["firstname"];?></div>
+        <div class="text-danger text-left"><?php echo $errors["firstname"];?></div>
       </div>
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Lastname"  name="lastname" value="<?php echo $lastName;?>"/>
-        <div class="text-danger"><?php echo $errors["lastname"];?></div>
+        <div class="text-danger text-left"><?php echo $errors["lastname"];?></div>
 
       </div>
       <div class="form-group">
         <input type="email" class="form-control" placeholder="Email"  name="email" value="<?php echo $email;?>"/>
-        <div class="text-danger"><?php echo $errors["email"];?></div>
+        <div class="text-danger text-left"><?php echo $errors["email"];?></div>
 
       </div>
       <div class="form-group">
         <input type="password" class="form-control" placeholder="Password"  name="password" value="<?php echo $password;?>"/>
-        <div class="text-danger"><?php echo $errors["password"];?></div>
+        <div class="text-danger text-left"><?php echo $errors["password"];?></div>
 
       </div>
       <div class="form-group">
         <input type="password" class="form-control" placeholder="Confirm password"  name="confirmPassword" value="<?php echo $confirmPassword;?>"/>
-        <div class="text-danger"><?php echo $errors["confirmPassword"];?></div>
+        <div class="text-danger text-left"><?php echo $errors["confirmPassword"];?></div>
 
       </div>
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Course"  name="course" value="<?php echo $course;?>"/>
-        <div class="text-danger"><?php echo $errors["course"];?></div>
+        <div class="text-danger text-left"><?php echo $errors["course"];?></div>
 
       </div>
       <div class="form-group">
-        <button class="btn btn-success container" type="submit">SIGN UP</button>
+        <button class="btn btn-success container" type="submit" name="submit">SIGN UP</button>
       </div>
     </form>
     </fieldset>
