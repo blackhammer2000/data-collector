@@ -18,7 +18,7 @@ if(isset($_POST["submit"])){
 
 
     if(empty($_POST["lastname"])){
-        $errors["lastname"] =  "Lastname cannot be empty <br/>";
+        // $errors["lastname"] =  "Lastname cannot be empty <br/>";
         echo "Lastname cannot be empty."
 
     }
@@ -30,7 +30,7 @@ if(isset($_POST["submit"])){
 
 
     if(empty($_POST["email"])){
-        $errors["email"] =  "Email cannot be empty <br/>"
+        // $errors["email"] =  "Email cannot be empty <br/>"
         echo "Email cannot be empty."
 
     }
@@ -43,7 +43,7 @@ if(isset($_POST["submit"])){
 
 
     if(empty($_POST["course"])){
-        $errors["course"] =  "Course cannot be empty <br/>"
+        // $errors["course"] =  "Course cannot be empty <br/>"
         echo "Course cannot be empty."
 
     }
