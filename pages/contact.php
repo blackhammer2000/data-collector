@@ -33,7 +33,7 @@
      
      
       <div class="form-group">
-        <input type="email" class="form-control" placeholder="Username"  name="username" value="<?php  echo htmlspecialchars($username);?>"/>
+        <input type="text" class="form-control" placeholder="Username"  name="username" value="<?php  echo htmlspecialchars($username);?>"/>
         <div class="text-danger text-left"><?php echo $errors["username"];?></div>
 
       </div>
@@ -44,7 +44,7 @@
       </div>
      
       <div class="form-group">
-        <textarea rows=5 type="text" class="form-control" placeholder="Message"  name="message" value="<?php  echo htmlspecialchars($message);?>"/>
+        <textarea rows=5 type="text" class="form-control" placeholder="Message"  name="message" value="<?php  echo htmlspecialchars($message);?>"></textarea>
         <div class="text-danger text-left"><?php echo $errors["messsage"];?></div>
 
       </div>
