@@ -1,5 +1,10 @@
-body {
+.body {
   min-height: 100vh;
+  background-image: url("../images/internship-program.png");
+  background-color: rgba(0, 0, 0, 0.651);
+  background-blend-mode: color;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .header {

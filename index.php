@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./css/index.css">
     <link rel="stylesheet" type="text/css" href="./css/universal.css">
   </head>
-  <body>
+  <body class="body">
     <header class="header container border-bottom d-flex justify-content-between mt-4">
       <div class="heading w-50 text-left align-items-center">
       <h1><span class="text-danger">DATA</span> COLLECTOR.</h1>
