@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<?php require("signuplogic.php")?>
+<?php require("contactlogic.php")?>
 
 <html lang="en">
   <head>
