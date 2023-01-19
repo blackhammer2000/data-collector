@@ -11,25 +11,25 @@ if(isset($_POST["submit"])){
 
     $textRegex = '/^[\w\s]+$/';
     $emailRegex = '/^[\w@.]+$/';
-    $passwordRegex = '/^[\w]/';
+    // $passwordRegex = '/^[\w]/';
 
-    if(empty($_POST["firstname"]))
+    if(empty($username))
         $errors["firstname"] =  "Firstname cannot be empty";
     
-    if(!preg_match($textRegex, $firstName))
-        $errors["firstname"] = "Invalid Firstname";
+    if(!preg_match($textRegex, $username))
+        $errors["username"] = "Invalid Username";
 
-    if(empty($_POST["lastname"]))
-        $errors["lastname"] =  "Lastname cannot be empty";
-    
-    if(!preg_match($textRegex, $lastName))
-        $errors["lastname"] = "Invalid Lastname";
-    
-    if(empty($_POST["email"]))
-        $errors["email"] =  "Email cannot be empty";
+    if(empty($email))
+        $errors["lastname"] =  "Email cannot be empty";
     
     if(!preg_match($emailRegex, $email))
         $errors["email"] = "Invalid Email";
+    
+    if(empty($message))
+        $errors["message"] =  "Message cannot be empty";
+    
+    if(!preg_match($textRegex, $message))
+        $errors["message"] = "Invalid Message";
     
     // require("database.php");
 
