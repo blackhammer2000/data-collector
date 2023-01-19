@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 <?php 
-require("signuplogic.php");
 require("../php/db.php");
+require("signuplogic.php");
 
 ?>
 
@@ -12,7 +12,7 @@ require("../php/db.php");
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DATA COLLECTOR</title>
+    <title>DATA COLLECTOR SIGNUP</title>
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/signup.css" />
     <link rel="stylesheet" type="text/css" href="../css/universal.css" />
@@ -33,7 +33,7 @@ require("../php/db.php");
 
     <section class="border-bottom  pb-3 container section hero-section mt-4 d-flex flex-column justify-content-between align-items-between text-center">
     <fieldset class="container border-top">
-      <legend  class="text-center bg-danger w-50"><span class="text-white">DATA</span> COLLECTOR <sup>&reg;</sup></legend>
+      <legend  class="text-center bg-danger w-50"><span class="text-white">SIGN</span> UP</legend>
     <form action="" method="POST" class="form container mt-2">
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Firstname"  name="firstname" value="<?php echo htmlspecialchars($firstName);?>"/>

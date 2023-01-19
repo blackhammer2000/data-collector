@@ -5,16 +5,16 @@ $database = "Students";
 $username = "root";
 $password = "";
 
-$dsn = "mysql:host=$host;dbname=$database";
+$dbURL = "mysql:host=$host;dbname=$database;";
 
 try {
 
- $dbconnection = new PDO($dsn, $username, $password);
+ $dbconnection = new PDO($dbURL, $username, $password);
  $dbconnection -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  echo "Connection to the database is successfull";
 
 } catch (PDOException $err) {
-echo "Database connec tion failed".$err->getMessage();
+echo "Database connection failed =>" .$err->getMessage();
 }
 
 ?>
