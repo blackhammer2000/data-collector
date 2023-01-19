@@ -68,9 +68,7 @@ require("signuplogic.php");
         <button class="btn btn-success container" type="submit" name="submit">SIGN UP</button>
       </div>
     </form>
-    </fieldset>
-
-      
+    </fieldset>  
     </section>
 
     <footer
