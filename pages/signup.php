@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 
-<?php require("signuplogic.php")?>
+<?php 
+require("signuplogic.php");
+require("../php/db.php");
+
+?>
+
 
 <html lang="en">
   <head>
