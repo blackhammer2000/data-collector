@@ -62,6 +62,20 @@ if(isset($_POST["submit"])){
     if(array_filter($errors))
         echo "There are errors in the form";
 
+    try {
+        $insertDataQuery = "INSERT INTO Students (firstname,lastname, email, password, course) VALUES (:firstname, :lastname, :email, :password, :course)"; 
+
+        $queryPreperation = $dbconnection->prepare($insertDataQuery);
+
+        
+
+
+        
+    } catch (PDOException $err) {
+        //throw $th;
+        echo $err->getmessage()
+    }
+
 
 
 }
