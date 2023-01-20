@@ -12,7 +12,7 @@
   <body class="body">
     <header class="header container border-bottom d-flex justify-content-between mt-4 text-white">
       <div class="heading w-50 text-left align-items-center">
-      <h1><span class="text-danger">DATA</span> COLLECTOR.</h1>
+      <h1><span class="text-danger">DATA</span> COLLECTOR<sup>&reg;</sup></h1>
       </div>
     <nav class="nav d-flex justify-content-end align-items-center">
       <ul class="d-flex container-fluid list-unstyled font-weight-bold text-dark">
@@ -26,7 +26,7 @@
     <section class="border-bottom  pb-3 container section hero-section mt-5 d-flex flex-column justify-content-between align-items-between text-center text-white">
       <div class="hero container  d-flex justify-content-center align-items-center flex-column">
         <div class="hero-header container  w-100">
-          <h2><span class="text-danger">DATA</span> COLLECTOR.</h2>
+          <h2><span class="text-danger">Data</span> management made easy.</h2>
         </div>
         <div class="hero-description mt-4">
           <h4>Fast and precise data at your disposal.</h4>
