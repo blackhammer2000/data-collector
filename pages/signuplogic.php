@@ -63,9 +63,9 @@ if(isset($_POST["submit"])){
         echo "There are errors in the form";
 
     try {
-        $insertDataQuery = "INSERT INTO Students (firstname,lastname, email, password, course) VALUES (:firstname, :lastname, :email, :password, :course)"; 
+        $insertStudentDataQuery = "INSERT INTO Students (firstname,lastname, email, password, course) VALUES (:firstname, :lastname, :email, :password, :course)"; 
 
-        $studentDataUploadQueryPreperation = $dbconnection->prepare($insertDataQuery);
+        $studentDataUploadQueryPreperation = $dbconnection -> prepare($insertStudentDataQuery);
 
         $studentData = [
             ':firstname' -> $firstName,
@@ -79,7 +79,7 @@ if(isset($_POST["submit"])){
 
         if($executeStudentDataUploadQuery) echo "<script> alert('Student data saved successfully.')</script>";
 
-        if(!$executeStudentDataUploadQuery) echo "<script> alert('Student data saved successfully.')</script>";
+        if(!$executeStudentDataUploadQuery) echo "<script> alert('Student data save failed.')</script>";
 
         
     } catch (PDOException $err) {
