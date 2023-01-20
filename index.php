@@ -59,14 +59,6 @@
         <li class="ml-4"><a href="">API</a></li>
       </ul>
     </footer>
-
-   
-    <!-- <form action="" method="POST">
-      <input type="number" name="grade">
-      <input type="number" name="num2">
-
-      <button type="submit" name="submit">grade</button>    
-    </form>   -->
   </body>
 </html>
 
