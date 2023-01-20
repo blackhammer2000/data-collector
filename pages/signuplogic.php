@@ -65,18 +65,22 @@ if(isset($_POST["submit"])){
     try {
         $insertDataQuery = "INSERT INTO Students (firstname,lastname, email, password, course) VALUES (:firstname, :lastname, :email, :password, :course)"; 
 
-        $queryPreperation = $dbconnection->prepare($insertDataQuery);
+        $studentDataUploadQueryPreperation = $dbconnection->prepare($insertDataQuery);
 
-        
+        $studentData = [
+            ':firstname' -> $firstName,
+            ':lastname' -> $lastName,
+            ':email' -> $email,
+            ':password' -> password_hash($password),
+            ':course' -> $course,
+        ];
 
+        $executeStudentDataUploadQuery = $studentDataUploadQueryPreperation -> execute($studentData);
 
         
     } catch (PDOException $err) {
-        //throw $th;
-        echo $err->getmessage()
+        echo $err->getmessage();
     }
-
-
 
 }
 
