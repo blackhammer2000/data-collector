@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="./css/universal.css">
   </head>
   <body class="body">
-    <header class="header container border-bottom d-flex justify-content-between mt-4">
+    <header class="header container border-bottom d-flex justify-content-between mt-4 text-white">
       <div class="heading w-50 text-left align-items-center">
       <h1><span class="text-danger">DATA</span> COLLECTOR.</h1>
       </div>
@@ -23,7 +23,7 @@
     </nav>
     </header>
 
-    <section class="border-bottom  pb-3 container section hero-section mt-5 d-flex flex-column justify-content-between align-items-between text-center">
+    <section class="border-bottom  pb-3 container section hero-section mt-5 d-flex flex-column justify-content-between align-items-between text-center text-white">
       <div class="hero container  d-flex justify-content-center align-items-center flex-column">
         <div class="hero-header container  w-100">
           <h2><span class="text-danger">DATA</span> COLLECTOR.</h2>
@@ -44,7 +44,7 @@
     </section>
 
     <footer
-      class="w-100 mt-5 row justify-content-around align-items-center h-auto"
+      class="w-100 mt-5 row justify-content-around align-items-center h-auto text-white"
     >
       <div
         class=" border-left px-5 payments font-italic font-weight-light w-auto h-100"
