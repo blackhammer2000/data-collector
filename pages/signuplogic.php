@@ -59,6 +59,11 @@ if(isset($_POST["submit"])){
 
     // require("database.php");
 
+    if(array_filter($errors))
+        echo "There are errors in the form";
+
+
+
 }
 
 ?>
