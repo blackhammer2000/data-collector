@@ -75,11 +75,11 @@ if(isset($_POST["submit"])){
             ':course' -> $course,
         ];
 
-        $executeStudentDataUploadQuery = $studentDataUploadQueryPreperation -> execute($studentData);
+        $studentDataUploadQueryExecute = $studentDataUploadQueryPreperation -> execute($studentData);
 
-        if($executeStudentDataUploadQuery) echo "<script> alert('Student data saved successfully.')</script>";
+        if($studentDataUploadQueryExecute) echo "<script> alert('Student data saved successfully.')</script>";
 
-        if(!$executeStudentDataUploadQuery) echo "<script> alert('Student data save failed.')</script>";
+        if(!$studentDataUploadQueryExecute) echo "<script> alert('Student data save failed.')</script>";
 
         
     } catch (PDOException $err) {
