@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 
-<?php require("loginlogic.php")?>
+<?php
+
+ require("../php/db.php");
+ require("loginlogic.php");
+ 
+ ?>
 
 <html lang="en">
   <head>
