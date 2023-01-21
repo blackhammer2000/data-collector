@@ -63,7 +63,7 @@ if(isset($_POST["submit"])){
         echo "There are errors in the form";
 
     try {
-        $insertStudentDataQuery = "INSERT INTO Students (firstname,lastname, email, password, course) VALUES (:firstname, :lastname, :email, :password, :course)"; 
+        $insertStudentDataQuery = "INSERT INTO students (firstname,lastname, email, password, course) VALUES (:firstname, :lastname, :email, :password, :course)"; 
 
         $studentDataUploadQueryPreperation = $dbconnection -> prepare($insertStudentDataQuery);
 
