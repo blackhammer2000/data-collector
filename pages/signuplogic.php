@@ -16,19 +16,19 @@ if(isset($_POST["submit"])){
     $emailRegex = '/^[\w@.]+$/';
     $passwordRegex = '/^[\w]/';
 
-    if(empty($_POST["firstname"]))
+    if(empty($firstName))
         $errors["firstname"] =  "Firstname cannot be empty";
     
     if(!preg_match($textRegex, $firstName))
         $errors["firstname"] = "Invalid Firstname";
 
-    if(empty($_POST["lastname"]))
+    if(empty($lastName))
         $errors["lastname"] =  "Lastname cannot be empty";
     
     if(!preg_match($textRegex, $lastName))
         $errors["lastname"] = "Invalid Lastname";
     
-    if(empty($_POST["email"]))
+    if(empty($email))
         $errors["email"] =  "Email cannot be empty";
     
     if(!preg_match($emailRegex, $email))

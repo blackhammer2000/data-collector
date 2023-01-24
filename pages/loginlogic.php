@@ -25,7 +25,7 @@
     $emailRegex = '/^[\w@.]+$/';
     $passwordRegex = '/^[\w]/';
 
-    if(empty($_POST["email"]))
+    if(empty($email))
     $errors["email"] =  "Email cannot be empty";
 
    if(!preg_match($emailRegex, $email))
