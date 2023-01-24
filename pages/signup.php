@@ -36,31 +36,31 @@ require("signuplogic.php");
       <legend  class="text-center bg-danger w-50"><span class="text-white">SIGN</span> UP</legend>
     <form action="" method="POST" class="form container mt-2">
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Firstname"  name="firstname" value="<?php echo htmlspecialchars($firstName);?>"/>
+        <input type="text" class="form-control" placeholder= "*Firstname"  name="firstname" value="<?php echo htmlspecialchars($firstName);?>"/>
         <div class="text-danger text-left"><?php echo $errors["firstname"];?></div>
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Lastname"  name="lastname" value="<?php echo htmlspecialchars($lastName);?>"/>
+        <input type="text" class="form-control" placeholder="*Lastname"  name="lastname" value="<?php echo htmlspecialchars($lastName);?>"/>
         <div class="text-danger text-left"><?php echo $errors["lastname"];?></div>
 
       </div>
       <div class="form-group">
-        <input type="email" class="form-control" placeholder="Email"  name="email" value="<?php  echo htmlspecialchars($email);?>"/>
+        <input type="email" class="form-control" placeholder="*Email"  name="email" value="<?php  echo htmlspecialchars($email);?>"/>
         <div class="text-danger text-left"><?php echo $errors["email"];?></div>
 
       </div>
       <div class="form-group">
-        <input type="password" class="form-control" placeholder="Password"  name="password" value="<?php  echo htmlspecialchars($password);?>"/>
+        <input type="password" class="form-control" placeholder="*Password"  name="password" value="<?php  echo htmlspecialchars($password);?>"/>
         <div class="text-danger text-left"><?php echo $errors["password"];?></div>
 
       </div>
       <div class="form-group">
-        <input type="password" class="form-control" placeholder="Confirm password"  name="confirmPassword" value="<?php  echo htmlspecialchars($confirmPassword);?>"/>
+        <input type="password" class="form-control" placeholder="*Confirm password"  name="confirmPassword" value="<?php  echo htmlspecialchars($confirmPassword);?>"/>
         <div class="text-danger text-left"><?php echo $errors["confirmPassword"];?></div>
 
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Course"  name="course" value="<?php  echo htmlspecialchars($course);?>"/>
+        <input type="text" class="form-control" placeholder="*Course"  name="course" value="<?php  echo htmlspecialchars($course);?>"/>
         <div class="text-danger text-left"><?php echo $errors["course"];?></div>
 
       </div>
