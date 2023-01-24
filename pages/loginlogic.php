@@ -17,10 +17,29 @@
 
 //  echo $count;
 
- if(isset($_POST["submit"])){
+ if(!isset($_POST["submit"])) return;
 
     $email = $_POST["email"];
     $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+
+    $emailRegex = '/^[\w@.]+$/';
+    $passwordRegex = '/^[\w]/';
+
+    if(empty($_POST["email"]))
+    $errors["email"] =  "Email cannot be empty";
+
+   if(!preg_match($emailRegex, $email))
+    $errors["email"] = "Invalid Email";
+
+    if(empty($password))
+    $errors["password"] =  "Password cannot be empty";
+
+  if(!preg_match($passwordRegex, $password))
+    $errors["password"] = "Password must be letters and numbers only";
+
+  if(strlen($password) < 8)
+    $errors["password"] = "Password must be more than 8 characters";
+
 
     try {
       $readStudentDataQuery = "SELECT * FROM students WHERE email = '$email', password = '$password' ";
@@ -41,8 +60,5 @@
    } catch (PDOException $err) {
       echo $err->getmessage();
       }
-
-    
- }
 
 ?>
