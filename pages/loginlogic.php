@@ -42,7 +42,7 @@
 
 
     try {
-      $readStudentDataQuery = "SELECT * FROM students WHERE email = '$email', password = '$password' ";
+      $readStudentDataQuery = "SELECT * FROM students WHERE email = ':email', password = ':password' ";
 
       $studentDataReadQueryPreperation = $dbconnection -> prepare($readStudentDataQuery);
 
