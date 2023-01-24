@@ -51,7 +51,6 @@
          ':password' =>$password,
      ];
 
-   //   $studentDataReadQueryExecute = $studentDataReadQueryPreperation -> execute($studentData);
      $studentDataReadQueryExecute = $studentDataReadQueryPreperation -> execute($studentData);
 
      if($studentDataReadQueryExecute) echo "student found";
