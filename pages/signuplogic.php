@@ -68,11 +68,11 @@ if(isset($_POST["submit"])){
         $studentDataUploadQueryPreperation = $dbconnection -> prepare($insertStudentDataQuery);
 
         $studentData = [
-            ':firstname' -> $firstName,
-            ':lastname' -> $lastName,
-            ':email' -> $email,
-            ':password' -> password_hash($password, PASSWORD_DEFAULT),
-            ':course' -> $course,
+            ':firstname' => $firstName,
+            ':lastname' => $lastName,
+            ':email' => $email,
+            ':password' => password_hash($password, PASSWORD_DEFAULT),
+            ':course' => $course,
         ];
 
         $studentDataUploadQueryExecute = $studentDataUploadQueryPreperation -> execute($studentData);
