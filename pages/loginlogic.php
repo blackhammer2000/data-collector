@@ -36,9 +36,10 @@
 
      if($studentDataUploadQueryExecute) echo "student found";
      if(!$studentDataUploadQueryExecute) echo "student not found";
-      } catch (\Throwable $th) {
-      //throw $th;
-    }
+     
+   } catch (PDOException $err) {
+      echo $err->getmessage();
+      }
 
     
  }
