@@ -71,7 +71,7 @@ if(isset($_POST["submit"])){
             ':firstname' -> $firstName,
             ':lastname' -> $lastName,
             ':email' -> $email,
-            ':password' -> password_hash($password),
+            ':password' -> password_hash($password, PASSWORD_DEFAULT),
             ':course' -> $course,
         ];
 
