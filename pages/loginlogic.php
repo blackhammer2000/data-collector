@@ -23,20 +23,21 @@
     $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
     try {
-      $readStudentDataQuery = "SELECT (firstname,lastname, email, password, course) FROM students WHERE ( :email , :password )";
+      $readStudentDataQuery = "SELECT * FROM students WHERE email = '$email', password = '$password' ";
 
-      $studentDataUploadQueryPreperation = $dbconnection -> prepare($insertStudentDataQuery);
+      $studentDataReadQueryPreperation = $dbconnection -> prepare($readStudentDataQuery);
 
       $studentData = [
          ':email' => $email,
-         ':password' => password_hash($password, PASSWORD_DEFAULT),
+         ':password' =>$password,
      ];
 
-     $studentDataUploadQueryExecute = $studentDataUploadQueryPreperation -> execute($studentData);
+   //   $studentDataReadQueryExecute = $studentDataReadQueryPreperation -> execute($studentData);
+     $studentDataReadQueryExecute = $studentDataReadQueryPreperation -> execute($studentData);
 
-     if($studentDataUploadQueryExecute) echo "student found";
-     if(!$studentDataUploadQueryExecute) echo "student not found";
-     
+     if($studentDataReadQueryExecute) echo "student found";
+     if(!$studentDataReadQueryExecute) echo "student not found";
+
    } catch (PDOException $err) {
       echo $err->getmessage();
       }
