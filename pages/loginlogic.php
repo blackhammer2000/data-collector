@@ -47,7 +47,7 @@
       @mysql_connect("localhost", "root", "dez");
       mysql_select_db("students");
 
-      $readStudentDataQuery = "SELECT * FROM students WHERE email = ':email' AND password = ':password' ";
+      $readStudentDataQuery = "SELECT * FROM students WHERE email = '$email' AND password = '$password' ";
 
       $result = mysql_query($readStudentDataQuery);
 
