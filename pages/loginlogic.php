@@ -17,7 +17,7 @@
 
 //  echo $count;
 
- if(!isset($_POST["submit"])) return;
+ if(!isset($_POST["login"])) return;
 
     $email = $_POST["email"];
     $password = password_hash($_POST["password"], PASSWORD_DEFAULT);

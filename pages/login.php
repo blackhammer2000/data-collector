@@ -4,7 +4,7 @@
 
  require("../php/db.php");
  require("loginlogic.php");
- 
+
  ?>
 
 <html lang="en">
@@ -34,7 +34,7 @@
     <section class="border-bottom  pb-3 container section hero-section mt-5 d-flex flex-column justify-content-between align-items-between text-center">
     <fieldset class="container border-top">
       <legend  class="text-center bg-danger w-50 mb-5"><span class="text-white">LOG</span> IN</legend>
-    <form action="" method="POST" class="form container" name="submit">
+    <form action="" method="POST" class="form container">
       <div class="form-group">
         <input type="email" class="form-control" placeholder="*Email"  name="firstname" value="<?php echo htmlspecialchars($email);?>"/>
         <div class="text-danger"><?php echo $errors["email"];?></div>
@@ -46,7 +46,7 @@
       </div>
     
       <div class="form-group">
-        <button class="btn btn-success container" type="submit">LOG IN</button>
+        <button class="btn btn-success container" type="submit" name="login">LOG IN</button>
       </div>
     </form>
     </fieldset>
