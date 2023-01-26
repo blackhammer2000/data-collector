@@ -42,30 +42,33 @@
 
 
     try {
-      // $readStudentDataQuery = "SELECT * FROM students WHERE email = ':email' AND password = ':password' ";
+       
+             // @mysql_connect("localhost", "root", "");
+             // mysql_select_db("students");
+       
+             // $readStudentDataQuery = "SELECT * FROM students WHERE email = '$email' AND password = '$password' ";
+       
+             // $result = mysql_query($readStudentDataQuery);
+       
+             // if(!mysql_num_row($result)) echo "Incorrect email or password";
+             
+             // if(mysql_num_row($result)) echo "Login successfull";
 
-      // @mysql_connect("localhost", "root", "");
-      mysql_select_db("students");
+   $readStudentDataQuery = "SELECT * FROM students WHERE email = ':email' AND password = ':password' ";
 
-      $readStudentDataQuery = "SELECT * FROM students WHERE email = '$email' AND password = '$password' ";
+      $studentDataReadQueryPreperation = $dbconnection -> prepare($readStudentDataQuery);
 
-      $result = mysql_query($readStudentDataQuery);
+      $studentData = [
+         ':email' => $email,
+         ':password' =>$password,
+     ];
 
-      if(!mysql_num_row($result)) echo "Incorrect email or password";
-      
-      if(mysql_num_row($result)) echo "Login successfull";
-      
-   //    $studentDataReadQueryPreperation = $dbconnection -> prepare($readStudentDataQuery);
+     $studentDataReadQueryExecute = $studentDataReadQueryPreperation -> execute($studentData);
 
-   //    $studentData = [
-   //       ':email' => $email,
-   //       ':password' =>$password,
-   //   ];
+     echo $studentDataReadQueryExecute;
 
-   //   $studentDataReadQueryExecute = $studentDataReadQueryPreperation -> execute($studentData);
-
-   //   if($studentDataReadQueryExecute) echo "student found";
-   //   if(!$studentDataReadQueryExecute) echo "student not found";
+     if($studentDataReadQueryExecute) echo "student found";
+     if(!$studentDataReadQueryExecute) echo "student not found";
 
    } catch (PDOException $err) {
       echo $err->getmessage();
