@@ -42,19 +42,22 @@
 
 
     try {
-      $readStudentDataQuery = "SELECT * FROM students WHERE email = ':email', password = ':password' ";
+      $readStudentDataQuery = "SELECT * FROM students WHERE email = ':email' AND password = ':password' ";
 
-      $studentDataReadQueryPreperation = $dbconnection -> prepare($readStudentDataQuery);
+      @mysql_connect("localhost", "root", "dez");
+      mysql_select_db("students");
 
-      $studentData = [
-         ':email' => $email,
-         ':password' =>$password,
-     ];
+   //    $studentDataReadQueryPreperation = $dbconnection -> prepare($readStudentDataQuery);
 
-     $studentDataReadQueryExecute = $studentDataReadQueryPreperation -> execute($studentData);
+   //    $studentData = [
+   //       ':email' => $email,
+   //       ':password' =>$password,
+   //   ];
 
-     if($studentDataReadQueryExecute) echo "student found";
-     if(!$studentDataReadQueryExecute) echo "student not found";
+   //   $studentDataReadQueryExecute = $studentDataReadQueryPreperation -> execute($studentData);
+
+   //   if($studentDataReadQueryExecute) echo "student found";
+   //   if(!$studentDataReadQueryExecute) echo "student not found";
 
    } catch (PDOException $err) {
       echo $err->getmessage();
