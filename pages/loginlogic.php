@@ -3,7 +3,7 @@
  $email  = $password = "";
  $errors = array("email" => "","password" => "");
 
- if(!isset($_POST["login"])) return;
+ if(isset($_POST["login"])) {
 
     $email = $_POST["email"];
     $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
@@ -60,4 +60,5 @@
       echo $err->getmessage();
       }
 
+   }
 ?>
