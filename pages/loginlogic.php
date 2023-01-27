@@ -28,17 +28,6 @@
 
 
     try {
-       
-             // @mysql_connect("localhost", "root", "");
-             // mysql_select_db("students");
-       
-             // $readStudentDataQuery = "SELECT * FROM students WHERE email = '$email' AND password = '$password' ";
-       
-             // $result = mysql_query($readStudentDataQuery);
-       
-             // if(!mysql_num_row($result)) echo "Incorrect email or password";
-             
-             // if(mysql_num_row($result)) echo "Login successfull";
 
    $readStudentDataQuery = "SELECT * FROM students WHERE email = ':email' AND password = ':password' ";
 
