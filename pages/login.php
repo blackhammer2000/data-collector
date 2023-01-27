@@ -37,11 +37,11 @@
     <form action="" method="POST" class="form container">
       <div class="form-group">
         <input type="email" class="form-control" placeholder="*Email"  name="firstname" value="<?php echo htmlspecialchars($email);?>"/>
-        <div class="text-danger"><?php echo $errors["email"];?></div>
+        <div class="text-danger text-left"><?php echo $errors["email"];?></div>
       </div>
       <div class="form-group">
         <input type="password" class="form-control" placeholder="*Password"  name="lastname" value="<?php echo htmlspecialchars($password);?>"/>
-        <div class="text-danger"><?php echo $errors["password"];?></div>
+        <div class="text-danger text-left"><?php echo $errors["password"];?></div>
 
       </div>
     
