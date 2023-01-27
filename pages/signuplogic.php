@@ -63,8 +63,6 @@ if(isset($_POST["submit"])){
     if(!preg_match($textRegex, $course))
         $errors["course"] = "Invalid Course Name";
 
-    // require("database.php");
-
     if(array_filter($errors))
         echo "There are errors in the form";
 

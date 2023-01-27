@@ -26,7 +26,7 @@ if(isset($_POST["submit"])){
         $errors["email"] = "Invalid Email";
     
     if(empty($message))
-        $errors["message"] =  "Message cannot be empty";
+        $errors["message"] = "Message cannot be empty";
     
     if(!preg_match($textRegex, $message))
         $errors["message"] = "Invalid Message";
