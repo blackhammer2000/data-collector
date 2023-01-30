@@ -5,9 +5,9 @@
 
  if(isset($_POST["login"])) {
 
-   if(isset($_POST["email"]))  $email = $_POST["email"];
-   
-   if(isset($_POST["password"]))   $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+   if(isset($_POST["email"])) $email = $_POST["email"];
+
+   if(isset($_POST["password"])) $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
     $emailRegex = '/^[\w@.]+$/';
     $passwordRegex = '/^[\w]/';
