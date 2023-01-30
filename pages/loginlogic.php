@@ -41,10 +41,14 @@
 
      $studentDataReadQueryExecute = $studentDataReadQueryPreperation -> execute($studentData);
 
-     echo $studentDataReadQueryExecute;
+     if($studentDataReadQueryExecute -> rowCount() !== 1) return;
 
-     if($studentDataReadQueryExecute) echo "student found";
-     if(!$studentDataReadQueryExecute) echo "student not found";
+     $user = $studentDataReadQueryExecute  -> fetch();
+
+     echo $user;
+
+     if($user) echo "student found";
+     if(!$user) echo "student not found";
 
    } catch (PDOException $err) {
       echo $err->getmessage();
