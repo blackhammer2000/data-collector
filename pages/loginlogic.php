@@ -41,7 +41,7 @@
 
      $studentDataReadQueryExecute = $studentDataReadQueryPreperation -> execute($studentData);
 
-     if($studentDataReadQueryExecute -> rowCount() < 1) return;
+     if($studentDataReadQueryExecute -> rowCount() === (0 || 2)) return;
 
      $user = $studentDataReadQueryExecute  -> fetch();
 
