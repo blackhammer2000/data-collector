@@ -34,6 +34,8 @@
     <fieldset class="container border-top">
       <legend  class="text-center bg-danger w-50 mb-5"><span class="text-white">LOG</span> IN</legend>
     <form action="" method="POST" class="form container">
+    <div class="text-danger text-left"><?php echo $errors["incorrect"];?></div>
+
       <div class="form-group">
         <input type="email" class="form-control" placeholder="*Email"  name="firstname" value="<?php echo htmlspecialchars($email);?>"/>
         <div class="text-danger text-left"><?php echo $errors["email"];?></div>
