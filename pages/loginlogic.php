@@ -1,5 +1,5 @@
 <?php
- require("../php/db.php");
+session_start();
 
  $email  = $password = "";
  $errors = array("email" => "","password" => "");
@@ -11,7 +11,7 @@
    if(isset($_POST["password"])) $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
     $emailRegex = '/^[\w@.]+$/';
-    $passwordRegex = '/^[\w]/';
+    $passwordRegex = '/^[\w]+$/';
 
     if(empty($email))
     $errors["email"] =  "Email cannot be empty";
@@ -26,7 +26,7 @@
     $errors["password"] = "Password must be letters and numbers only";
 
   if(strlen($password) < 8)
-    $errors["password"] = "Password must be more than 8 characters";
+    $errors["password"] = "Password must be 8 characters or more";
 
 
     try {
@@ -40,16 +40,22 @@
          ':password' =>$password,
      ];
 
-      $studentDataReadQueryPreperation -> execute($studentData);
+     $studentDataReadQueryExecute = $studentDataReadQueryPreperation -> execute($studentData);
 
-     if($studentDataReadQueryPreperation -> fetchColumn() < 1) return;
+     if($studentDataReadQueryExecute  !== 1) return;
 
-     $user = $studentDataReadQueryPreperation  -> fetch();
+     $user = $studentDataReadQueryExecute  -> fetch();
 
      echo $user;
 
      if($user) echo "student found";
      if(!$user) echo "student not found";
+
+    $userID = $user['id'];
+    $userFirstname = $user['firstname'];
+    $userLastname = $user['lastname'];
+    $userEmail = $user['email'];
+    $userCourse = $user['course'];
 
    } catch (PDOException $err) {
       echo $err->getmessage();
