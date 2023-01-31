@@ -1,4 +1,5 @@
 <?php
+ require("../php/db.php");
 
  $email  = $password = "";
  $errors = array("email" => "","password" => "");
@@ -41,9 +42,9 @@
 
      $studentDataReadQueryExecute = $studentDataReadQueryPreperation -> execute($studentData);
 
-     if($studentDataReadQueryExecute -> rowCount() !== 1) return;
+     if($studentDataReadQueryExecute -> fetchColumn() < 1) return;
 
-     $user = $studentDataReadQueryExecute  -> fetch();
+     $user = $studentDataReadQueryExecute  -> query();
 
      echo $user;
 
