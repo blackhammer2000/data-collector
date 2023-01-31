@@ -40,11 +40,11 @@
          ':password' =>$password,
      ];
 
-     $studentDataReadQueryExecute = $studentDataReadQueryPreperation -> execute($studentData);
+      $studentDataReadQueryPreperation -> execute($studentData);
 
-     if($studentDataReadQueryExecute -> fetchColumn() < 1) return;
+     if($studentDataReadQueryPreperation -> fetchColumn() < 1) return;
 
-     $user = $studentDataReadQueryExecute  -> query();
+     $user = $studentDataReadQueryPreperation  -> fetch();
 
      echo $user;
 
