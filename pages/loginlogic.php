@@ -50,7 +50,7 @@ session_start();
 
       $studentData = [
          ':email' => $email,
-         ':password' =>$password,
+         ':password' => password_hash( $password, PASSWORD_DEFAULT)
      ];
 
      $studentDataReadQueryPreperation -> execute($studentData);
