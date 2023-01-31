@@ -6,60 +6,83 @@ session_start();
 
  if(isset($_POST["login"])) {
 
-   if(isset($_POST["email"])) $email = $_POST["email"];
+   $email = $_POST["email"];
 
-   if(isset($_POST["password"])) $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+  echo $email;
+
+   $password = $_POST["password"];
+
+    echo $password;
+    
+  //  password_hash($_POST["password"], PASSWORD_DEFAULT);
 
     $emailRegex = '/^[\w@.]+$/';
     $passwordRegex = '/^[\w]+$/';
 
-    if(empty($email))
-    $errors["email"] =  "Email cannot be empty";
+    if(empty($email)) {
+      $errors["email"] =  "Email cannot be empty";
+    }else{
+      if(!preg_match($emailRegex, $email)){
+        $errors["email"] = "Invalid Email";
+      }else{
+      if (empty($password)) {
+        $errors["password"] = "Password cannot be empty";
+      }else{
 
-   if(!preg_match($emailRegex, $email))
-    $errors["email"] = "Invalid Email";
+        if (!preg_match($passwordRegex, $password)) {
+          $errors["password"] = "Password must be letters and numbers only";
+        }else{
+          if(strlen($password) < 8){
+            $errors["password"] = "Password must be 8 characters or more";
+          }else{
 
-    if(empty($password))
-    $errors["password"] =  "Password cannot be empty";
-
-  if(!preg_match($passwordRegex, $password))
-    $errors["password"] = "Password must be letters and numbers only";
-
-  if(strlen($password) < 8)
-    $errors["password"] = "Password must be 8 characters or more";
-
-
+            
     try {
 
-   $readStudentDataQuery = "SELECT * FROM students WHERE email = ':email' AND password = ':password' ";
+      $readStudentDataQuery = "SELECT * FROM students WHERE email = ':email' AND password = ':password' ";
+   
+         $studentDataReadQueryPreperation = $dbconnection -> prepare($readStudentDataQuery);
+   
+         $studentData = [
+            ':email' => $email,
+            ':password' =>$password,
+        ];
+   
+        $studentDataReadQueryPreperation -> execute($studentData);
+   
+        if($studentDataReadQueryPreperation -> rowCount()  !== 1) return;
+   
+        $user = $studentDataReadQueryPreperation  -> fetch();
+   
+        echo $user;
+   
+        if($user) echo "student found";
+        if(!$user) echo "student not found";
+   
+       $userID = $user['id'];
+       $userFirstname = $user['firstname'];
+       $userLastname = $user['lastname'];
+       $userEmail = $user['email'];
+       $userCourse = $user['course'];
+   
+      } catch (PDOException $err) {
+         echo $err->getmessage();
+         }
 
-      $studentDataReadQueryPreperation = $dbconnection -> prepare($readStudentDataQuery);
-
-      $studentData = [
-         ':email' => $email,
-         ':password' =>$password,
-     ];
-
-     $studentDataReadQueryExecute = $studentDataReadQueryPreperation -> execute($studentData);
-
-     if($studentDataReadQueryExecute  !== 1) return;
-
-     $user = $studentDataReadQueryExecute  -> fetch();
-
-     echo $user;
-
-     if($user) echo "student found";
-     if(!$user) echo "student not found";
-
-    $userID = $user['id'];
-    $userFirstname = $user['firstname'];
-    $userLastname = $user['lastname'];
-    $userEmail = $user['email'];
-    $userCourse = $user['course'];
-
-   } catch (PDOException $err) {
-      echo $err->getmessage();
+          }
+        }
       }
+      }
+    }
+
+   
+
+  
+
+
+   
+
+
 
    }
 ?>
