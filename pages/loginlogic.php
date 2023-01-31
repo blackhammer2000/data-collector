@@ -43,12 +43,12 @@ session_start();
 
 
     try {
+      
+     $readStudentDataQuery = "SELECT * FROM students WHERE email = ':email'";
 
-   $readStudentDataQuery = "SELECT * FROM students WHERE email = ':email'";
+     $studentDataReadQueryPreperation = $dbconnection -> prepare($readStudentDataQuery);
 
-      $studentDataReadQueryPreperation = $dbconnection -> prepare($readStudentDataQuery);
-
-      $studentData = [
+     $studentData = [
          ':email' => $email,
      ];
 
@@ -60,39 +60,37 @@ session_start();
 
      echo $user;
 
-    if(!$user){
+     if(!$user){
       $errors['incorrect'] = "Incorrect email or password";
       return;
-    }
+     }
 
-    $userEmail = $user['email'];
-    $userPassword = $user['password'];
+     $userEmail = $user['email'];
+     $userPassword = $user['password'];
 
-    if($userEmail !== $email){
+     if($userEmail !== $email){
       $errors['incorrect'] = "Incorrect email or password";
       return;
-    }
+     }
 
-    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    if(!password_verify($hashedPassword, $userPassword)){
+     if(!password_verify($hashedPassword, $userPassword)){
       $errors['incorrect'] = "Incorrect email or password";
       return;
-    }
+     }
 
+     //  if($user) echo "student found";
+     //  if(!$user) echo "student not found";
 
+     $userID = $user['id'];
+     $userFirstname = $user['firstname'];
+     $userLastname = $user['lastname'];
+     $userCourse = $user['course'];
 
-    //  if($user) echo "student found";
-    //  if(!$user) echo "student not found";
-
-    $userID = $user['id'];
-    $userFirstname = $user['firstname'];
-    $userLastname = $user['lastname'];
-    $userCourse = $user['course'];
-
-   } catch (PDOException $err) {
+    } catch (PDOException $err) {
       echo $err->getmessage();
-      }
+    }
 
    }
 ?>
