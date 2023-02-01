@@ -8,8 +8,7 @@ session_start();
 
    if(isset($_POST["email"])) $email = $_POST["email"];
 
-   if (isset($_POST["password"]))
-    $password = $_POST["password"];
+   if (isset($_POST["password"])) $password = $_POST["password"];
     
   //  password_hash($_POST["password"], PASSWORD_DEFAULT);
 
@@ -43,7 +42,7 @@ session_start();
 
 
     try {
-      
+
      $readStudentDataQuery = "SELECT * FROM students WHERE email = ':email'";
 
      $studentDataReadQueryPreperation = $dbconnection -> prepare($readStudentDataQuery);
