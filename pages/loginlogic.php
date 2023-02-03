@@ -1,7 +1,7 @@
 <?php
 session_start();
 
- $email  = $password = "";
+ $email = $password = "";
  $errors = array("email" => "","password" => "", "incorrect" => "");
 
  if(isset($_POST["login"])) {
@@ -72,9 +72,9 @@ session_start();
       return;
      }
 
-     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+    //  $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-     if(!password_verify($hashedPassword, $userPassword)){
+     if(!password_verify($password, $userPassword)){
       $errors['incorrect'] = "Incorrect email or password";
       return;
      }
