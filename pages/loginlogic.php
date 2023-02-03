@@ -45,7 +45,8 @@ session_start();
 
      $readStudentDataQuery = "SELECT * FROM students WHERE email = ':email'";
 
-     $studentDataReadQueryPreperation = $dbconnection -> prepare($readStudentDataQuery);
+    $studentDataReadQueryPreperation = mysqli_query($dbconnection, $readStudentDataQuery);
+    //  $dbconnection -> prepare($readStudentDataQuery);
 
      $studentData = [
          ':email' => $email,
