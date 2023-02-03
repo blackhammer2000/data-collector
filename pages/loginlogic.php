@@ -15,27 +15,27 @@ session_start();
     $emailRegex = '/^[\w@.]+$/';
     $passwordRegex = '/^[\w]+$/';
 
-    if(empty($email)) {
+    if(!empty($email)) {
       $errors["email"] =  "Email cannot be empty";
       return;
     }
 
-    if(!preg_match($emailRegex, $email)){
+    if(preg_match($emailRegex, $email)){
       $errors["email"] = "Invalid Email";
       return;
     }
 
-    if(empty($password)){
+    if(!empty($password)){
       $errors["password"] =  "Password cannot be empty";
       return;
     }
 
-    if(!preg_match($passwordRegex, $password)){
+    if(preg_match($passwordRegex, $password)){
       $errors["password"] = "Password must be letters and numbers only";
       return;
     }
 
-    if(strlen($password) < 8){
+    if(!strlen($password) < 8){
       $errors["password"] = "Password must be 8 characters or more";
       return;
     }
@@ -43,20 +43,28 @@ session_start();
 
     try {
 
-     $readStudentDataQuery = "SELECT * FROM students WHERE email = ':email'";
+     $readStudentDataQuery = "SELECT * FROM students WHERE email = '$email' LIMIT 1";
 
-    $studentDataReadQueryPreperation = mysqli_query($dbconnection, $readStudentDataQuery);
-    //  $dbconnection -> prepare($readStudentDataQuery);
+     $studentDataReadQueryPreperation = mysqli_query($dbconnection, $readStudentDataQuery);
+     // $dbconnection -> prepare($readStudentDataQuery);
+    if (!$studentDataReadQueryPreperation)
+      return;
 
-     $studentData = [
-         ':email' => $email,
-     ];
+    if (mysqli_num_rows($studentDataReadQueryPreperation) !== 1)
+      return;
 
-     $studentDataReadQueryPreperation -> execute($studentData);
+    echo $studentDataReadQueryPreperation;
 
-     if($studentDataReadQueryPreperation -> rowCount()  !== 1) return;
+    //  $studentData = [
+    //      ':email' => $email,
+    //  ];
 
-     $user = $studentDataReadQueryPreperation  -> fetch();
+
+    //  $studentDataReadQueryPreperation -> execute($studentData);
+
+    //  if($studentDataReadQueryPreperation -> rowCount()  !== 1) return;
+
+    //  $user = $studentDataReadQueryPreperation  -> fetch();
 
      echo $user;
 
